@@ -22,7 +22,7 @@ def get_random_message(love_percentage):
             "Destined to be together. Congratulations!"
         ])
         
-@app.on_message(filters.command("lvu", prefixes="/"))
+@app.on_message(filters.command("luv", prefixes="/"))
 def love_command(client, message):
     command, *args = message.text.split(" ")
     if len(args) >= 2:
@@ -34,5 +34,5 @@ def love_command(client, message):
 
         response = f"{name1}💕 + {name2}💕 = {love_percentage}%\n\n{love_message}"
     else:
-        response = "Please enter two names after /lvu command."
+        response = "Please enter two names after /luv command."
     app.send_message(message.chat.id, response)
